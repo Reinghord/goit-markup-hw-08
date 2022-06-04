@@ -1,0 +1,8 @@
+/* Portfolio */
+.projects {
+  @include section;
+}
+
+.projects__title {
+  @include visually-hidden;
+}

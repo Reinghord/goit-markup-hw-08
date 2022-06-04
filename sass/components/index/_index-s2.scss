@@ -1,0 +1,47 @@
+/* Index - Section 2 (Features) */
+.features {
+  @include section;
+}
+
+.features__title {
+  @include visually-hidden;
+}
+
+.features__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.features__item {
+  max-width: 270px;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+
+.features__icon {
+  display: block;
+  padding: 25px 100px;
+  background-color: $bgColorSecondary;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.features__subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  margin-bottom: 10px;
+}
+
+.features__text {
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.71;
+
+  text-align: left;
+}

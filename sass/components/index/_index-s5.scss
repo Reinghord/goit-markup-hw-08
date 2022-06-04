@@ -1,0 +1,52 @@
+/* Index - Section 5 (Loyal Customers) */
+.customers {
+  @include section;
+}
+
+.customers__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.customers__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.customers__item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+
+  &:hover {
+    border-color: $colorHover;
+  }
+}
+
+.customers__icon {
+  fill: $colorIcon;
+  padding: 16px 32px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $colorHover;
+  }
+}

@@ -1,0 +1,22 @@
+/* Header */
+.page-header {
+  border-bottom: 1px solid #ececec;
+
+  &--display {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-header__logo {
+  color: $HdLogoColor;
+  text-decoration: none;
+  font-family: $fontSecondary;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  &--secondary {
+    color: $LogoColorSec;
+  }
+}

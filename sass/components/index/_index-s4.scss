@@ -1,0 +1,49 @@
+/* Index - Section 4 (Our Team) */
+.team {
+  background: $bgColorSecondary;
+  @include section;
+}
+
+.team__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+.team__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team__item {
+  background-color: $bgColorPrimary;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
+}
+
+.team__img {
+  display: block;
+}
+
+.team__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.team__text {
+  color: $colorSeconday;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}

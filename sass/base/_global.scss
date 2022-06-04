@@ -1,0 +1,35 @@
+// Global for body
+body {
+  font-family: $fontPrimary;
+  color: $colorPrimary;
+  background-color: $bgColorPrimary;
+  letter-spacing: 0.03em;
+}
+
+// Global reset
+@mixin global {
+  margin: 0;
+  padding: 0;
+}
+
+$global-list: h1, h2, h3, p, ul;
+@each $tag in $global-list {
+  #{$tag} {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+//  Buttons style
+button {
+  cursor: pointer;
+}
+
+// Container
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

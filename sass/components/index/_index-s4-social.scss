@@ -1,0 +1,41 @@
+/* Index - Section 4 (Our team) - Social */
+.social {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+  margin-top: 16px;
+  padding: 0 32px;
+}
+
+.social__item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: $colorHover;
+  }
+}
+
+.social__icon {
+  fill: $colorIcon;
+  padding: 12px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $colorHero;
+  }
+}

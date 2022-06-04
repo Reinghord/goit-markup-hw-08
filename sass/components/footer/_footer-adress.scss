@@ -1,0 +1,33 @@
+/* Footer - Address */
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address__text {
+  margin-bottom: 9px;
+}
+
+.address__list {
+  list-style: none;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $colorHover;
+    text-decoration: none;
+  }
+}
