@@ -4,6 +4,10 @@ body {
   color: $colorPrimary;
   background-color: $bgColorPrimary;
   letter-spacing: 0.03em;
+  &.modal-open,
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 // Global reset
