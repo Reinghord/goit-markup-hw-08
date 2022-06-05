@@ -61,7 +61,7 @@
     <main>
       <!--Index - Section 1 (Hero)-->
       <section class="hero">
-        <div class="container">
+        <div class="container hero--wrapper">
           <h1 class="hero__title">
             эффективные решения<br />
             для вашего бизнеса
@@ -77,13 +77,15 @@
           <h2 class="features__title">Особенности</h2>
           <ul class="features__list">
             <li class="features__item">
-              <svg class="features__icon" width="270" height="120">
-                <use
-                  href="./images/icons.svg#icon-antenna-1"
-                  width="70"
-                  height="70"
-                ></use>
-              </svg>
+              <div class="features__icon--wrapper">
+                <svg class="features__icon">
+                  <use
+                    href="./images/icons.svg#icon-antenna-1"
+                    width="70"
+                    height="70"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="features__subtitle">Внимание к деталям</h3>
               <p class="features__text">
                 Идейные соображения, а также начало повседневной работы по
@@ -91,13 +93,15 @@
               </p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="270" height="120">
-                <use
-                  href="./images/icons.svg#icon-clock-1"
-                  width="70"
-                  height="70"
-                ></use>
-              </svg>
+              <div class="features__icon--wrapper">
+                <svg class="features__icon">
+                  <use
+                    href="./images/icons.svg#icon-clock-1"
+                    width="70"
+                    height="70"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="features__subtitle">Пунктуальность</h3>
               <p class="features__text">
                 Задача организации, в особенности же рамки и место обучения
@@ -105,13 +109,15 @@
               </p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="270" height="120">
-                <use
-                  href="./images/icons.svg#icon-diagram-1"
-                  width="70"
-                  height="70"
-                ></use>
-              </svg>
+              <div class="features__icon--wrapper">
+                <svg class="features__icon">
+                  <use
+                    href="./images/icons.svg#icon-diagram-1"
+                    width="70"
+                    height="70"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="features__subtitle">Планирование</h3>
               <p class="features__text">
                 Равным образом консультация с широким активом в значительной
@@ -119,13 +125,15 @@
               </p>
             </li>
             <li class="features__item">
-              <svg class="features__icon" width="270" height="120">
-                <use
-                  href="./images/icons.svg#icon-astronaut-1"
-                  width="70"
-                  height="70"
-                ></use>
-              </svg>
+              <div class="features__icon--wrapper">
+                <svg class="features__icon">
+                  <use
+                    href="./images/icons.svg#icon-astronaut-1"
+                    width="70"
+                    height="70"
+                  ></use>
+                </svg>
+              </div>
               <h3 class="features__subtitle">Современные технологии</h3>
               <p class="features__text">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -405,7 +413,7 @@
           <ul class="customers__list">
             <li class="customers__item">
               <a href="https://bit.ly/3wQuslN">
-                <svg class="customers__icon" width="170" height="92">
+                <svg class="customers__icon">
                   <use
                     href="./images/icons.svg#icon-logo"
                     width="106"
@@ -415,7 +423,7 @@
             </li>
             <li class="customers__item">
               <a href="https://bit.ly/3wQuslN">
-                <svg class="customers__icon" width="170" height="92">
+                <svg class="customers__icon">
                   <use
                     href="./images/icons.svg#icon-logo-1"
                     width="106"
@@ -469,8 +477,8 @@
     </main>
     <!--Footer-->
     <footer class="page-footer">
-      <div class="container page-footer--display">
-        <section>
+      <div class="container">
+        <section class="page-footer--display">
           <a href="./index.html" class="page-footer__logo"
             ><span class="page-footer__logo--secondary">Web</span>Studio</a
           >
@@ -632,10 +640,10 @@
                 <svg class="checkbox__icon" width="16" height="15">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
-                <div>
+                <p>
                   Соглашаюсь с рассылкой и принимаю
                   <a class="checkbox__terms" href="">Условия договора</a>
-                </div></label
+                </p></label
               >
             </div>
             <button class="fieldset__send" type="submit">Отправить</button>

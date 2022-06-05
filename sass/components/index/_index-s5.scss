@@ -5,22 +5,23 @@
 
 .customers__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
 
-  margin-bottom: 50px;
+  font-size: 28px;
+  line-height: 1.18;
+  margin-bottom: 30px;
 }
 
 .customers__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  // justify-content: center;
   list-style: none;
 }
 
 .customers__item {
-  width: 170px;
-  height: 92px;
+  display: inline-block;
+  width: calc((100% - 30px) / 2);
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
@@ -28,25 +29,33 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:not(:first-child) {
-    margin-left: 30px;
-  }
-
   &:hover {
     border-color: $colorHover;
   }
+  &:hover .customers__icon {
+    fill: $colorHover;
+  }
+  &:nth-child(2n) {
+    margin-left: 30px;
+  }
+  margin-bottom: 30px;
+}
+
+.customers__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
 }
 
 .customers__icon {
   fill: $colorIcon;
-  padding: 16px 32px;
+  // padding: 16px 32px;
 
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    fill: $colorHover;
-  }
+  width: 106px;
+  height: 60px;
 }

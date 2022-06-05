@@ -8,6 +8,9 @@
 
 .page-footer--display {
   display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 .page-footer__logo {
@@ -16,8 +19,6 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
 
   margin-bottom: 20px;
   display: block;
@@ -25,6 +26,10 @@
   &:visited {
     color: inherit;
   }
+
+  font-size: 24px;
+  line-height: 1.17;
+  // text-align: center;
 }
 
 .page-footer__logo--secondary {

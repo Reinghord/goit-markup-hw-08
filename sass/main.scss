@@ -1,9 +1,10 @@
 @import './utils/variables';
 @import './utils/mixin';
+@import './utils/breakpoints';
 @import './base/global';
-@import './components/header/header';
-@import './components/header/header-nav';
-@import './components/header/header-cont';
+// @import './components/header/header';
+// @import './components/header/header-nav';
+// @import './components/header/header-cont';
 @import './components/index/index-hero';
 @import './components/index/index-s2';
 @import './components/index/index-s3';
@@ -17,6 +18,6 @@
 @import './components/footer/footer-adress';
 @import './components/footer/footer-join';
 @import './components/footer/footer-subs';
-@import './components/portfolio/portfolio';
-@import './components/portfolio/portfolio-cat';
-@import './components/portfolio/portfolio-projects';
+// @import './components/portfolio/portfolio';
+// @import './components/portfolio/portfolio-cat';
+// @import './components/portfolio/portfolio-projects';
