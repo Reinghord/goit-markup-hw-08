@@ -24,6 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .subscription__input {
@@ -32,7 +33,7 @@
   border-radius: 4px;
   background-color: #2f303a;
   padding: 15px 0px 15px 16px;
-  width: 358px;
+  width: calc(100vw - 30px);
 
   margin-bottom: 20px;
   line-height: 1.25;

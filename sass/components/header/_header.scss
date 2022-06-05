@@ -49,6 +49,13 @@
       height: 100vh;
     }
   }
+  @media screen and (max-height: 750px) {
+    &.is-open + .menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
 }
 .page-header__icon--close {
   display: none;
@@ -58,6 +65,8 @@
   z-index: 999;
   padding: 48px 40px;
   background-color: $bgColorPrimary;
+
+  overflow-y: scroll;
 
   @media screen and (max-width: 767px) {
     display: none;

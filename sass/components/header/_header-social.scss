@@ -2,9 +2,13 @@
   margin-top: 64px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 
   @media screen and (min-width: $tablet) {
     display: none;
+  }
+  @media screen and (max-height: 750px) {
+    margin-top: 0px;
   }
 }
 .header-social__item {

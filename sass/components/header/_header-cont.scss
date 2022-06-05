@@ -11,6 +11,10 @@
   list-style: none;
 
   margin-top: 302px;
+
+  @media screen and (max-height: 750px) {
+    margin-top: 0px;
+  }
 }
 
 // .contacts__item:not(:first-child) {

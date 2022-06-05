@@ -121,6 +121,14 @@ button {
   }
 }
 
+@media screen and (max-height: 750px) {
+  .page-header__menu.is-open + .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
 .page-header__icon--close {
   display: none;
 }
@@ -129,6 +137,7 @@ button {
   z-index: 999;
   padding: 48px 40px;
   background-color: #ffffff;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 767px) {
@@ -193,6 +202,12 @@ button {
   margin-top: 302px;
 }
 
+@media screen and (max-height: 750px) {
+  .contacts {
+    margin-top: 0px;
+  }
+}
+
 .contacts__item:first-child {
   margin-bottom: 30px;
 }
@@ -239,11 +254,18 @@ button {
   margin-top: 64px;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
   .header-social {
     display: none;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .header-social {
+    margin-top: 0px;
   }
 }
 
@@ -938,6 +960,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .subscription__input {
@@ -946,7 +969,7 @@ button {
   border-radius: 4px;
   background-color: #2f303a;
   padding: 15px 0px 15px 16px;
-  width: 358px;
+  width: calc(100vw - 30px);
   margin-bottom: 20px;
   line-height: 1.25;
 }
