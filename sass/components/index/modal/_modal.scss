@@ -12,6 +12,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   overflow-y: scroll;
+  z-index: 10000;
 }
 
 .backdrop.is-hidden {
@@ -44,6 +45,11 @@
   transition-property: opacity visibility transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (max-height: 625px) {
+    top: 0%;
+    transform: translate(-50%, 0) scale(1);
+  }
 }
 
 .modal__btn {
