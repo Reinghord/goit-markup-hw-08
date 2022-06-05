@@ -15,8 +15,13 @@
   letter-spacing: 0.01em;
 
   color: $colorSeconday;
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
 
-  margin-bottom: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // margin-bottom: 4px;
 
   // &:focus-visible {
   //   color: $colorHover;
@@ -27,7 +32,10 @@
   position: relative;
   display: flex;
 
-  margin-bottom: 10px;
+  margin-bottom: 28px;
+  &:last-child {
+    margin-bottom: 20px;
+  }
 }
 
 .fieldset__input {
@@ -46,6 +54,9 @@
   &:focus-visible + .fieldset__icon {
     fill: $colorHover;
   }
+  &:focus-visible ~ .fieldset__label {
+    color: $colorHover;
+  }
 }
 
 .fieldset__icon {
@@ -61,19 +72,21 @@
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 100%;
 
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
 
-  margin-bottom: 20px;
-
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:focus-visible {
     border: 1px solid $colorHover;
     outline: transparent;
+  }
+  &:focus-visible ~ .fieldset__label {
+    color: $colorHover;
   }
 }
 

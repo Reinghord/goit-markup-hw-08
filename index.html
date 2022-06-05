@@ -617,7 +617,6 @@
         <h2 class="modal__title">Оставьте свои данные, мы вам перезвоним</h2>
         <form>
           <fieldset class="fieldset">
-            <label class="fieldset__label" for="form-name">Имя</label>
             <div class="fieldset__wrapper">
               <input
                 class="fieldset__input"
@@ -628,8 +627,9 @@
               <svg class="fieldset__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person-black"></use>
               </svg>
+              <label class="fieldset__label" for="form-name">Имя</label>
             </div>
-            <label class="fieldset__label" for="form-tel">Телефон</label>
+
             <div class="fieldset__wrapper">
               <input
                 class="fieldset__input"
@@ -640,8 +640,9 @@
               <svg class="fieldset__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone-black"></use>
               </svg>
+              <label class="fieldset__label" for="form-tel">Телефон</label>
             </div>
-            <label class="fieldset__label" for="form-email">Почта</label>
+
             <div class="fieldset__wrapper">
               <input
                 class="fieldset__input"
@@ -652,17 +653,21 @@
               <svg class="fieldset__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email-black"></use>
               </svg>
+              <label class="fieldset__label" for="form-email">Почта</label>
             </div>
-            <label class="fieldset__label" for="form-comment"
-              >Комментарий</label
-            >
-            <textarea
-              class="fieldset__comment"
-              name="form-comment"
-              id="form-comment"
-              rows="7"
-              placeholder="Введите текст"
-            ></textarea>
+
+            <div class="fieldset__wrapper">
+              <textarea
+                class="fieldset__comment"
+                name="form-comment"
+                id="form-comment"
+                rows="7"
+                placeholder="Введите текст"
+              ></textarea>
+              <label class="fieldset__label" for="form-comment"
+                >Комментарий</label
+              >
+            </div>
             <!-- Checkbox -->
             <div class="checkbox">
               <input

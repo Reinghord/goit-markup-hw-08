@@ -660,7 +660,7 @@ button {
   line-height: 1.15;
   text-align: center;
   color: #212121;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .fieldset {
@@ -676,13 +676,20 @@ button {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: #757575;
-  margin-bottom: 4px;
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fieldset__wrapper {
   position: relative;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
+}
+
+.fieldset__wrapper:last-child {
+  margin-bottom: 20px;
 }
 
 .fieldset__input {
@@ -703,6 +710,10 @@ button {
   fill: #2196f3;
 }
 
+.fieldset__input:focus-visible ~ .fieldset__label {
+  color: #2196f3;
+}
+
 .fieldset__icon {
   position: absolute;
   top: 11px;
@@ -715,17 +726,21 @@ button {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  width: 100%;
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.01em;
-  margin-bottom: 20px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fieldset__comment:focus-visible {
   border: 1px solid #2196f3;
   outline: transparent;
+}
+
+.fieldset__comment:focus-visible ~ .fieldset__label {
+  color: #2196f3;
 }
 
 .fieldset__send {
