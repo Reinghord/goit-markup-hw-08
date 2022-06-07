@@ -50,13 +50,17 @@
 
 .projects__img {
   display: block;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  height: auto;
+  max-height: 294px;
 }
 
 .projects__slidetext {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(100%);
   font-size: 18px;
   line-height: 1.56;

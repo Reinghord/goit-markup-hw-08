@@ -75,6 +75,12 @@ button {
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding: 0;
+  }
+}
+
 .page-header__logo {
   color: #000000;
   text-decoration: none;
@@ -148,13 +154,37 @@ button {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    margin-left: 88px;
+    padding: 0;
+    overflow-y: visible;
+  }
+}
+
 /* Header - Navigation */
+@media screen and (min-width: 768px) {
+  .navigation {
+    margin-right: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .navigation__list {
   font-weight: 500;
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
   list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: flex;
+  }
 }
 
 .navigation__item {
@@ -165,20 +195,25 @@ button {
   margin-bottom: 30px;
 }
 
-.navigation__item--current {
-  color: #2196f3;
-}
-
-.navigation__item--current::after {
-  content: '';
-  display: inline-block;
-  background: #2196f3;
-  border-radius: 2px;
-  opacity: 1;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  bottom: -1px;
+@media screen and (min-width: 768px) {
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0px;
+  }
+  .navigation__item--current {
+    color: #2196f3;
+  }
+  .navigation__item--current::after {
+    content: '';
+    display: inline-block;
+    background: #2196f3;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    bottom: -1px;
+  }
 }
 
 .navigation__link {
@@ -194,6 +229,16 @@ button {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .navigation__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    padding: 32px 0;
+  }
+}
+
 /* Header - Contacts */
 .contacts {
   font-weight: 500;
@@ -204,14 +249,29 @@ button {
   margin-top: 302px;
 }
 
-@media screen and (max-height: 750px) {
+@media screen and (max-height: 750px), (min-width: 768px) {
   .contacts {
     margin-top: 0px;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
 .contacts__item:first-child {
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__item:first-child {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
 }
 
 .contacts__link {
@@ -241,8 +301,18 @@ button {
   color: #757575;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts__link.conctacts__item--tel, .contacts__link.contacts__item--email {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
+}
+
 .contacts__icon {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: currentColor;
 }
 
@@ -306,6 +376,12 @@ button {
   padding: 118px 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .hero--wrapper {
+    padding: 118px 204px;
+  }
+}
+
 .hero__title {
   color: #ffffff;
   font-weight: 900;
@@ -366,8 +442,31 @@ button {
   margin-right: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .features__item:not(:first-child) {
   margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .features__item:not(:first-child) {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc((100% - 30px) / 2);
+  }
+  .features__item:nth-child(n + 3) {
+    margin-top: 30px;
+  }
 }
 
 .features__icon--wrapper {
@@ -493,6 +592,9 @@ button {
 
 .team__img {
   display: block;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  height: auto;
 }
 
 .team__subtitle {
@@ -1105,13 +1207,17 @@ button {
 
 .projects__img {
   display: block;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  height: auto;
+  max-height: 294px;
 }
 
 .projects__slidetext {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   transform: translateY(100%);
   font-size: 18px;
   line-height: 1.56;

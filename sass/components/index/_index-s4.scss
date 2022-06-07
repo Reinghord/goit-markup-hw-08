@@ -35,6 +35,9 @@
 
 .team__img {
   display: block;
+  width: calc(100vw - 30px);
+  max-width: 450px;
+  height: auto;
 }
 
 .team__subtitle {

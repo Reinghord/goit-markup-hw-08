@@ -8,6 +8,9 @@
     display: flex;
     align-items: center;
   }
+  @media screen and (min-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .page-header__logo {
@@ -44,7 +47,6 @@
     display: block;
   }
 
-  // @media screen and (max-width: 767px) {
   &.is-open + .menu {
     display: block;
     position: absolute;
@@ -53,7 +55,6 @@
     width: 100%;
     height: 100vh;
   }
-  // }
   @media screen and (max-height: 750px) {
     &.is-open + .menu {
       display: flex;
@@ -75,5 +76,11 @@
 
   @media screen and (max-width: 767px) {
     display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-left: 88px;
+    padding: 0;
+    overflow-y: visible;
   }
 }
