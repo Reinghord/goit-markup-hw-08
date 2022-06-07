@@ -15,6 +15,12 @@
 
 .team__list {
   list-style: none;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
   // display: flex;
   // justify-content: space-between;
 }
@@ -26,10 +32,18 @@
   border-radius: 0px 0px 4px 4px;
 
   padding-bottom: 24px;
-  margin-bottom: 30px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
 
-  &:last-child {
-    margin-bottom: 0px;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
+    &:not(:nth-child(n + 1)) {
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -38,6 +52,9 @@
   width: calc(100vw - 30px);
   max-width: 450px;
   height: auto;
+  @media screen and (min-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .team__subtitle {

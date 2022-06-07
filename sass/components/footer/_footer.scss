@@ -6,11 +6,21 @@
   padding: 60px 0px;
 }
 
+@media screen and (min-width: $tablet) {
+  .container--tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 .page-footer--display {
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+
+  flex-wrap: wrap;
 }
 
 .page-footer__logo {

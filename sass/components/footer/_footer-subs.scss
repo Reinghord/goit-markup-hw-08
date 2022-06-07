@@ -6,6 +6,9 @@
   align-items: center;
   // margin-left: 93px;
   // padding-top: 12px;
+  @media screen and (min-width: $tablet) {
+    margin-top: 60px;
+  }
 }
 
 .subscription__title {

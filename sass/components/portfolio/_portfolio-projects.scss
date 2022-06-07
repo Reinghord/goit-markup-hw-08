@@ -1,9 +1,9 @@
 /* Portfolio - Projects */
 .projects__list {
   list-style: none;
-  // display: flex;
-
-  // flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .projects__item {
@@ -30,8 +30,8 @@
   &:hover .projects__slidetext {
     transform: translateY(0%);
   }
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 30px) / 2);
   }
 }
 
@@ -54,6 +54,10 @@
   max-width: 450px;
   height: auto;
   max-height: 294px;
+
+  @media screen and (min-width: $tablet) {
+    width: 100%;
+  }
 }
 
 .projects__slidetext {
