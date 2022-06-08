@@ -50,10 +50,10 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  &:focus {
-    color: $colorHover;
-  }
+  // &:hover,
+  // &:focus {
+  //   color: $colorHover;
+  // }
   &.conctacts__item--tel {
     font-weight: 500;
     font-size: 34px;
@@ -80,16 +80,16 @@
       letter-spacing: 0.02em;
       color: #757575;
     }
+    &.conctacts__item--tel:hover,
+    &.contacts__item--email:hover,
+    &.conctacts__item--tel:focus,
+    &.contacts__item--email:focus {
+      color: $colorHover;
+    }
   }
   @media screen and (min-width: $desktop) {
     display: flex;
     align-items: center;
-  }
-  &.conctacts__item--tel:hover,
-  &.contacts__item--email:hover,
-  &.conctacts__item--tel:focus,
-  &.contacts__item--email:focus {
-    color: $colorHover;
   }
 }
 .contacts__icon {
