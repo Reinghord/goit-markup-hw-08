@@ -14,6 +14,11 @@
     align-items: flex-start;
   }
 }
+@media screen and (min-width: $desktop) {
+  .container--desktop {
+    flex-wrap: nowrap;
+  }
+}
 .page-footer--display {
   display: flex;
   flex-direction: column;
@@ -21,6 +26,9 @@
   align-items: center;
 
   flex-wrap: wrap;
+  @media screen and (min-width: $desktop) {
+    align-items: flex-start;
+  }
 }
 
 .page-footer__logo {
@@ -39,9 +47,12 @@
 
   font-size: 24px;
   line-height: 1.17;
-  // text-align: center;
-}
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 
-.page-footer__logo--secondary {
-  color: $LogoColorSec;
+  .page-footer__logo--secondary {
+    color: $LogoColorSec;
+  }
 }

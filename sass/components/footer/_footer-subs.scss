@@ -9,6 +9,11 @@
   @media screen and (min-width: $tablet) {
     margin-top: 60px;
   }
+  @media screen and (min-width: $desktop) {
+    margin-top: 0px;
+    margin-left: 93px;
+    padding-top: 12px;
+  }
 }
 
 .subscription__title {
@@ -21,6 +26,9 @@
   margin-bottom: 20px;
 
   text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .subscription__wrapper {
@@ -28,6 +36,10 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+  @media screen and (min-width: $desktop) {
+    flex-direction: row;
+  }
 }
 
 .subscription__input {
@@ -41,6 +53,12 @@
 
   margin-bottom: 20px;
   line-height: 1.25;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 358px;
+    margin-bottom: 0px;
+    margin-right: 12px;
+  }
 }
 
 .subscription__btn {
@@ -62,7 +80,6 @@
   color: $btnColor;
 
   padding: 10px 28px 10px 29px;
-  // margin-left: 12px;
 }
 
 .subscription__icon {

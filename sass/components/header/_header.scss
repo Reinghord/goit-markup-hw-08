@@ -24,6 +24,10 @@
   &--secondary {
     color: $LogoColorSec;
   }
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .page-header__menu {
   background-color: transparent;
@@ -82,5 +86,8 @@
     margin-left: 88px;
     padding: 0;
     overflow-y: visible;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
   }
 }

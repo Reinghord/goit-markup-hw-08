@@ -15,6 +15,9 @@
 .categories__item {
   margin-bottom: 15px;
   margin-right: 8px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 0px;
+  }
 }
 
 .categories__btn {

@@ -12,6 +12,9 @@
 .address__list {
   list-style: none;
   text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .address__item:not(:last-child) {

@@ -88,6 +88,11 @@
   &:focus-visible ~ .fieldset__label {
     color: $colorHover;
   }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 12px;
+    line-height: 1.166;
+  }
 }
 
 .fieldset__send {

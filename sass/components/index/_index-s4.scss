@@ -11,6 +11,12 @@
   font-size: 28px;
   line-height: 1.18;
   margin-bottom: 30px;
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+    line-height: 1.166;
+
+    margin-bottom: 50px;
+  }
 }
 
 .team__list {
@@ -41,9 +47,9 @@
 
   @media screen and (min-width: $tablet) {
     width: calc((100% - 30px) / 2);
-    &:not(:nth-child(n + 1)) {
-      margin-bottom: 0px;
-    }
+  }
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 90px) / 4);
   }
 }
 

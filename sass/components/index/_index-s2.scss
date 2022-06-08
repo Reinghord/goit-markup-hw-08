@@ -28,7 +28,7 @@
   }
 
   @media screen and (min-width: $tablet) {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - 90px) / 4);
   }
 }
 .features__icon--wrapper {
@@ -58,6 +58,9 @@
   margin-bottom: 10px;
 
   text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .features__text {

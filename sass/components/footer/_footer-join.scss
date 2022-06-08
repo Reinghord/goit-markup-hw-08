@@ -9,6 +9,12 @@
   @media screen and (min-width: $tablet) {
     margin: 0px 0px 0px 165px;
   }
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+    padding-top: 12px;
+
+    align-items: flex-start;
+  }
 }
 
 .join__title {
@@ -18,6 +24,9 @@
   text-transform: uppercase;
 
   margin-bottom: 20px;
+  // @media screen and (min-width: $desktop) {
+  //   align-items: flex-start;
+  // }
 }
 
 .join__list {
