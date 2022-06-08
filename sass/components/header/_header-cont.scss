@@ -85,8 +85,13 @@
     display: flex;
     align-items: center;
   }
+  &.conctacts__item--tel:hover,
+  &.contacts__item--email:hover,
+  &.conctacts__item--tel:focus,
+  &.contacts__item--email:focus {
+    color: $colorHover;
+  }
 }
-
 .contacts__icon {
   margin-right: 8px;
   fill: currentColor;
