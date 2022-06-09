@@ -710,6 +710,7 @@ button {
 @media screen and (min-width: 1200px) {
   .team__item {
     width: calc((100% - 90px) / 4);
+    padding-bottom: 30px;
   }
 }
 

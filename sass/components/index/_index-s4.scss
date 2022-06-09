@@ -50,6 +50,7 @@
   }
   @media screen and (min-width: $desktop) {
     width: calc((100% - 90px) / 4);
+    padding-bottom: 30px;
   }
 }
 
