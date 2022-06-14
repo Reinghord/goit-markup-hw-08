@@ -28,6 +28,7 @@
   flex-wrap: wrap;
   @media screen and (min-width: $desktop) {
     align-items: flex-start;
+    width: 231px;
   }
 }
 
