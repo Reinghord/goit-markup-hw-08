@@ -485,7 +485,7 @@ button {
 .hero {
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
-  max-width: 468px;
+  max-width: 480px;
   margin-inline: auto;
   background-repeat: no-repeat;
   background-position: center;
