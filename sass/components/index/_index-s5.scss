@@ -5,28 +5,34 @@
 
 .customers__title {
   font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
   text-align: center;
 
-  font-size: 28px;
-  line-height: 1.18;
-  margin-bottom: 30px;
-  @media screen and (min-width: $desktop) {
-    font-size: 36px;
-    line-height: 1.166;
-  }
+  margin-bottom: 50px;
 }
 
 .customers__list {
   display: flex;
-  flex-wrap: wrap;
-  // justify-content: center;
+  justify-content: center;
   list-style: none;
-  gap: 30px;
 }
 
 .customers__item {
-  display: inline-block;
-  width: calc((100% - 30px) / 2);
+  width: 170px;
+  height: 92px;
+
+  &:not(:first-child) {
+    margin-left: 30px;
+  }
+}
+.customers__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
@@ -34,27 +40,11 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: $colorHover;
   }
-  &:hover .customers__icon {
-    fill: $colorHover;
-  }
-  @media screen and (min-width: $tablet) {
-    width: calc((100% - 30px * 2) / 3);
-  }
-  @media screen and (min-width: $desktop) {
-    width: calc((100% - 30px * 5) / 6);
-  }
 }
-
-.customers__item a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 0px;
-}
-
 .customers__icon {
   fill: $colorIcon;
   // padding: 16px 32px;
@@ -63,6 +53,8 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  width: 106px;
-  height: 60px;
+  .customers__link:hover &,
+  .customers__link:focus & {
+    fill: $colorHover;
+  }
 }
