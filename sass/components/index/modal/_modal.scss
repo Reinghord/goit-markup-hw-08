@@ -11,8 +11,11 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  overflow-y: scroll;
   z-index: 10000;
+
+  @media screen and (max-height: 625px) {
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden {
@@ -34,7 +37,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
   padding: 40px;
 
   background-color: $bgColorPrimary;
@@ -69,7 +71,8 @@
   top: 8px;
   right: 8px;
 
-  &:hover .modal__icon {
+  &:hover .modal__icon,
+  &:focus .modal__icon {
     fill: $colorHover;
   }
 }
@@ -81,10 +84,14 @@
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
 
   color: $colorPrimary;
 
   margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
 }

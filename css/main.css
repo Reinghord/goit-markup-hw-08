@@ -971,8 +971,13 @@ button {
   transition-property: opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  overflow-y: scroll;
   z-index: 10000;
+}
+
+@media screen and (max-height: 625px) {
+  .backdrop {
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1030,7 +1035,8 @@ button {
   right: 8px;
 }
 
-.modal__btn:hover .modal__icon {
+.modal__btn:hover .modal__icon,
+.modal__btn:focus .modal__icon {
   fill: #2196f3;
 }
 
@@ -1041,10 +1047,16 @@ button {
 .modal__title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: #212121;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .fieldset {
@@ -1111,6 +1123,7 @@ button {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 100%;
+  height: 120px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
@@ -1137,6 +1150,7 @@ button {
 .fieldset__send {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-width: 0px;
   border-radius: 4px;
   border-color: transparent;
   padding: 10px 55px 10px 56px;
@@ -1152,7 +1166,7 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fieldset__send:hover {
+.fieldset__send:hover, .fieldset__send:focus {
   background: #188ce8;
 }
 
@@ -1432,7 +1446,8 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  background-color: #2f303a;
+  background-color: transparent;
+  color: #ffffff;
   padding: 15px 0px 15px 16px;
   width: calc(100vw - 30px);
   max-width: 450px;
