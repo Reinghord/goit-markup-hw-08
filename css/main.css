@@ -720,7 +720,7 @@ button {
   text-align: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .features__subtitle {
     text-align: left;
   }
@@ -1592,13 +1592,19 @@ button {
   margin-right: 8px;
 }
 
-.categories__item:nth-child(n + 4) {
+.categories__item:nth-last-child(-n + 2) {
   margin-top: 15px;
 }
 
 @media screen and (min-width: 768px) {
-  .categories__item:nth-child(n + 4) {
+  .categories__item:nth-last-child(-n + 2) {
     margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .categories__item:nth-last-child(-n + 3) {
+    margin-top: 15px;
   }
 }
 
