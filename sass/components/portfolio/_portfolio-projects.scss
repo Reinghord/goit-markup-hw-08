@@ -27,7 +27,10 @@
 
 .projects__link {
   text-decoration: none;
-  display: block;
+
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
   height: 100%;
 
@@ -43,6 +46,7 @@
   &:hover .projects__slidetext,
   &:focus .projects__slidetext {
     transform: translateY(0%);
+    opacity: 1;
   }
 }
 
@@ -64,28 +68,34 @@
 }
 
 .projects__slidetext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 77px 24px;
+  width: 100%;
   height: 100%;
+  padding: 0 24px;
+
+  opacity: 0;
   transform: translateY(100%);
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  @media screen and (min-width: $tablet) {
-    padding: 49px 24px 0px;
-  }
-  @media screen and (min-width: $desktop) {
-    padding: 63px 24px 0px;
+
+  @media screen and (max-width: 479px) {
+    font-size: 14px;
   }
 }
 .projects__wrapper2 {
+  flex-grow: 1;
+
   padding-top: 20px;
   padding-bottom: 20px;
   padding-inline: 24px;

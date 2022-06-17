@@ -61,6 +61,9 @@
     letter-spacing: 0.02em;
 
     color: #2196f3;
+    @media screen and (max-width: 479px) {
+      font-size: 24px;
+    }
   }
   &.contacts__item--email {
     font-weight: 500;
@@ -69,6 +72,9 @@
     letter-spacing: 0.02em;
 
     color: #757575;
+    @media screen and (max-width: 479px) {
+      font-size: 24px;
+    }
   }
 
   @media screen and (min-width: $tablet) {

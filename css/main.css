@@ -140,7 +140,7 @@ button {
   .page-header__menu.is-open + .menu {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 
@@ -285,6 +285,12 @@ button {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .navigation__list {
+    font-size: 30px;
+  }
+}
+
 .navigation__item {
   position: relative;
 }
@@ -403,12 +409,24 @@ button {
   color: #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .contacts__link.conctacts__item--tel {
+    font-size: 24px;
+  }
+}
+
 .contacts__link.contacts__item--email {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.166;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+@media screen and (max-width: 479px) {
+  .contacts__link.contacts__item--email {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -464,8 +482,20 @@ button {
   padding-right: 10px;
 }
 
+@media screen and (max-width: 479px) {
+  .header-social__item {
+    padding-right: 5px;
+  }
+}
+
 .header-social__item:not(:first-child) {
   padding-left: 10px;
+}
+
+@media screen and (max-width: 479px) {
+  .header-social__item:not(:first-child) {
+    padding-left: 5px;
+  }
 }
 
 .header-social__item:not(:last-child) {
@@ -481,11 +511,16 @@ button {
   color: #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .header-social__link {
+    font-size: 12px;
+  }
+}
+
 /* Index - Section 1 (Hero) */
 .hero {
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-mobile.jpg);
-  max-width: 480px;
   margin-inline: auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -502,7 +537,6 @@ button {
 @media screen and (min-width: 768px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-tablet.jpg);
-    max-width: 768px;
     margin-inline: auto;
   }
 }
@@ -561,6 +595,13 @@ button {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .hero__title {
+    font-size: 20px;
+    line-height: 1.36;
+  }
+}
+
 .hero__btn {
   color: #ffffff;
   background-color: #2196f3;
@@ -578,6 +619,12 @@ button {
 
 .hero__btn:hover, .hero__btn:focus {
   background-color: #188ce8;
+}
+
+@media screen and (max-width: 479px) {
+  .hero__btn {
+    padding: 5px 16px;
+  }
 }
 
 /* Index - Section 2 (Features) */
@@ -1524,14 +1571,23 @@ button {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .categories {
+    margin-bottom: 50px;
+  }
+}
+
 .categories__item {
-  margin-bottom: 15px;
   margin-right: 8px;
 }
 
+.categories__item:nth-child(n + 4) {
+  margin-top: 15px;
+}
+
 @media screen and (min-width: 768px) {
-  .categories__item {
-    margin-bottom: 0px;
+  .categories__item:nth-child(n + 4) {
+    margin-top: 0px;
   }
 }
 
@@ -1583,7 +1639,8 @@ button {
 
 .projects__link {
   text-decoration: none;
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
@@ -1599,6 +1656,7 @@ button {
 .projects__link:hover .projects__slidetext,
 .projects__link:focus .projects__slidetext {
   transform: translateY(0%);
+  opacity: 1;
 }
 
 .projects__wrapper {
@@ -1621,34 +1679,34 @@ button {
 }
 
 .projects__slidetext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
-  padding: 77px 24px;
+  width: 100%;
   height: 100%;
+  padding: 0 24px;
+  opacity: 0;
   transform: translateY(100%);
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
-  transition-property: transform;
+  transition-property: transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 479px) {
   .projects__slidetext {
-    padding: 49px 24px 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .projects__slidetext {
-    padding: 63px 24px 0px;
+    font-size: 14px;
   }
 }
 
 .projects__wrapper2 {
+  flex-grow: 1;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-inline: 24px;
