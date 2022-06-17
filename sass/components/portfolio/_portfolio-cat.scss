@@ -5,6 +5,9 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 
+  column-gap: 8px;
+  row-gap: 15px;
+
   margin-bottom: 40px;
   @media screen and (min-width: $tablet) {
     justify-content: center;
@@ -12,22 +15,6 @@
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 50px;
-  }
-}
-
-.categories__item {
-  margin-right: 8px;
-
-  &:nth-last-child(-n + 2) {
-    margin-top: 15px;
-    @media screen and (min-width: $tablet) {
-      margin-top: 0px;
-    }
-  }
-  &:nth-last-child(-n + 3) {
-    @media screen and (max-width: 375px) {
-      margin-top: 15px;
-    }
   }
 }
 

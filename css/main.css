@@ -1572,6 +1572,8 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  column-gap: 8px;
+  row-gap: 15px;
   margin-bottom: 40px;
 }
 
@@ -1585,26 +1587,6 @@ button {
 @media screen and (min-width: 1200px) {
   .categories {
     margin-bottom: 50px;
-  }
-}
-
-.categories__item {
-  margin-right: 8px;
-}
-
-.categories__item:nth-last-child(-n + 2) {
-  margin-top: 15px;
-}
-
-@media screen and (min-width: 768px) {
-  .categories__item:nth-last-child(-n + 2) {
-    margin-top: 0px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .categories__item:nth-last-child(-n + 3) {
-    margin-top: 15px;
   }
 }
 
