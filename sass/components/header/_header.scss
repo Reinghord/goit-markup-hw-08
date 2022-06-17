@@ -42,10 +42,8 @@
   &.is-open .page-header__icon--menu {
     display: none;
   }
-  &:hover .page-header__icon--menu,
-  &:focus .page-header__icon--menu,
-  &:hover .page-header__icon--close,
-  &:focus .page-header__icon--close {
+  &:hover .page-header__icon,
+  &:focus .page-header__icon {
     fill: $colorHover;
   }
 
@@ -73,12 +71,11 @@
     }
   }
 }
-.page-header__icon--menu {
+.page-header__icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.page-header__icon--close {
-  display: none;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &--close {
+    display: none;
+  }
 }
 
 .menu {
