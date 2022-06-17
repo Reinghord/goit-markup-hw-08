@@ -113,8 +113,15 @@ button {
   display: block;
 }
 
-.page-header__menu.is-open .page-header__icon {
+.page-header__menu.is-open .page-header__icon--menu {
   display: none;
+}
+
+.page-header__menu:hover .page-header__icon--menu,
+.page-header__menu:focus .page-header__icon--menu,
+.page-header__menu:hover .page-header__icon--close,
+.page-header__menu:focus .page-header__icon--close {
+  fill: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
@@ -144,8 +151,13 @@ button {
   }
 }
 
+.page-header__icon--menu {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .page-header__icon--close {
   display: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu {
@@ -295,6 +307,10 @@ button {
   position: relative;
 }
 
+.navigation__item--current {
+  color: #2196f3;
+}
+
 .navigation__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -303,9 +319,6 @@ button {
   .navigation__item:not(:last-child) {
     margin-right: 50px;
     margin-bottom: 0px;
-  }
-  .navigation__item--current {
-    color: #2196f3;
   }
   .navigation__item--current::after {
     content: '';
